@@ -3,6 +3,7 @@ const equationDisplay = document.getElementById('equation');
 const answerDisplay = document.getElementById('answer');
 const equals = document.getElementById('equals');
 const clear = document.getElementById('clear');
+const backspace = document.getElementById('delete');
 
 let firstNum;
 let secondNum;
@@ -94,6 +95,13 @@ function clearDisplay() {
     operator = undefined;
 }
 
+function deleteCharacter() {
+    let textArray = equationDisplay.textContent.toString().split('');
+    textArray.pop();
+    equationDisplay.textContent = textArray.join('');
+}
+
 buttons.forEach(button => button.addEventListener('click', displayEquation));
 equals.addEventListener('click', displayAnswer);
 clear.addEventListener('click', clearDisplay);
+backspace.addEventListener('click', deleteCharacter);
