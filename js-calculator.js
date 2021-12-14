@@ -59,24 +59,27 @@ function displayAnswer() {
     numbers = equation.match(/\w{1,}/g);
     operators = equation.match(/[^0-9]/g);
 
-
-    firstNum = numbers[0];
-    secondNum = numbers[1];
+    for (let i = 0; i < operators.length; i++) {
+        firstNum = numbers[0];
+        secondNum = numbers[1];
     
-    operator = operators[0];
+        operator = operators[i];
 
-    switch (operator) {
-        case '+':
-            answer = add(firstNum, secondNum);
-            break;
-        case '-':
-            answer = subtract(firstNum, secondNum);
-            break;
-        case '/':
-            answer = divide(firstNum, secondNum);
-            break;
-        case '*':
-            answer = multiply(firstNum, secondNum);
+        switch (operator) {
+            case '+':
+                answer = add(firstNum, secondNum);
+                break;
+            case '-':
+                answer = subtract(firstNum, secondNum);
+                break;
+            case '/':
+                answer = divide(firstNum, secondNum);
+                break;
+            case '*':
+                answer = multiply(firstNum, secondNum);
+        }
+
+        numbers.splice(0, 2, answer);
     }
 
     answerDisplay.textContent = answer;
