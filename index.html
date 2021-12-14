@@ -5,33 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Calculator</title>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
     <link rel="stylesheet" href='styles.css'>
 </head>
 <body>
     <div id="box">
-        <div id='display'></div>
+        <div id='display'>
+            <div id='equation'></div>
+            <div id='answer'></div>
+        </div>
         <div id='big-buttons'>
-            <button class='erase'>Erase</button>
-            <button class='clear'>Clear</button>
+            <button id='erase'>ERASE</button>
+            <button id='clear'>CLEAR</button>
         </div>
         <div id='buttons'>
-            <button class='button'>7</button>
-            <button class='button'>8</button>
-            <button class='button'>9</button>
-            <button class='button'>/</button>
-            <button class='button'>4</button>
-            <button class='button'>5</button>
-            <button class='button'>6</button>
-            <button class='button'>*</button>
-            <button class='button'>1</button>
-            <button class='button'>2</button>
-            <button class='button'>3</button>
-            <button class='button'>-</button>
-            <button class='button'>.</button>
-            <button class='button'>0</button>
-            <button class='button'>=</button>
-            <button class='button'>+</button>
+            <button class='button'value="7">7</button>
+            <button class='button'value="8">8</button>
+            <button class='button'value="9">9</button>
+            <button class='button'value="/">/</button>
+            <button class='button'value="4">4</button>
+            <button class='button'value="5">5</button>
+            <button class='button'value="6">6</button>
+            <button class='button'value="*">*</button>
+            <button class='button'value="1">1</button>
+            <button class='button'value="2">2</button>
+            <button class='button'value="3">3</button>
+            <button class='button'value="-">-</button>
+            <button class='button'value=".">.</button>
+            <button class='button'value="0">0</button>
+            <button id='equals' class='button'value="=">=</button>
+            <button class='button'value="+">+</button>
         </div>
     </div>
+    <script src="js-calculator.js"></script>
 </body>
 </html>

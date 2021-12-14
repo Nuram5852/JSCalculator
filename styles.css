@@ -2,38 +2,41 @@
     width: 45vh; 
     height: 70vh;
     min-width: 400px;
-    border: 1px solid black;
-    background-color: darkgray;
+    background-color: #374785;
     margin: 10vh;
     border-radius: 10px;
     display: grid;
     grid-template-rows: 2fr 1fr 4fr;
     grid-template-columns: 1fr;
-    box-shadow: 10px 10px 15px grey;
+    box-shadow: 1px 1px 20px #A8D0E6;
 }
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #24305E;
 }
 
 #display {
-    width: fit-content;
-    height: fit-content;
-    border: 1px solid black;
-    background-color: whitesmoke;
+    background-color: #A8D0E6;
     border-radius: 10px;
+    font-family: 'Allerta Stencil';
+    font-size: 30px;
+    box-shadow: 3px 3px 15px #24305E;
 }
 
 #buttons, #display, #big-buttons {
   margin: 15px; 
-  grid-gap: 5px; 
+  grid-gap: 10px; 
 }
 
 button {
-    border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 50%;
+    background-color: #A8D0E6;
+    box-shadow: 3px 3px 15px #24305E;
+    font-family: 'Allerta Stencil';
+    font-size: large;
 }
 
 #buttons {
@@ -47,10 +50,14 @@ button {
     grid-template-columns: 1fr 1fr;
 }
 
-.clear {
-    background-color: rgb(240, 228, 70);
+#clear {
+    background-color: #F76C6C;
 }
 
-.erase {
-    background-color: rgb(91, 103, 212);
+#erase {
+    background-color: #F8E9A1;
+}
+
+#equation, #answer {
+    margin: 15px;
 }
